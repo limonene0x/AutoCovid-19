@@ -39,7 +39,7 @@ $response_1801 = curl_exec($curl);
 curl_close($curl);
 
 $file = './submit.log';
-$data = date('Y-m-d H:i:s') . ' LOG 1801 LOG ' . $response_1801 . PHP_EOL . PHP_EOL;
+$data = date('Y-m-d H:i:s') . ' LOG=网络1801=LOG ' . $response_1801 . PHP_EOL . PHP_EOL;
 file_put_contents($file, $data, FILE_APPEND | LOCK_EX);
 
 sleep(10); // 第二个要提交的班级延迟十秒
@@ -63,5 +63,5 @@ $response_1804 = curl_exec($curl);
 curl_close($curl);
 
 $file = './submit.log';
-$data = date('Y-m-d H:i:s') . ' LOG 1804 LOG ' . $response_1804 . PHP_EOL . PHP_EOL;
+$data = date('Y-m-d H:i:s') . ' LOG=网络1804=LOG ' . $response_1804 . PHP_EOL . PHP_EOL;
 file_put_contents($file, $data, FILE_APPEND | LOCK_EX);
